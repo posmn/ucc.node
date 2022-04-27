@@ -1,0 +1,7 @@
+{
+    "id": "posmn.ucc.node" ,
+    "version" : "0.0.1+2.0.1.2",
+    "dependencies": [
+        { "id":"btc.base" }
+    ]
+}

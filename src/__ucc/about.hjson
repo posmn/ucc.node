@@ -1,0 +1,10 @@
+{
+    "Description": '''
+UniverseCreditcoin masternode'''
+    Links: [
+        { 
+            website: "https://universecreditcoin.com/",
+            explorer: "http://5.181.217.6:14005/"
+        }
+    ]
+}
