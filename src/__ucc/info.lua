@@ -13,7 +13,7 @@ ami_assert(
 )
 
 local _info = {
-     xsolidusd = _status,
+    xsolidusd = _status,
     started = _started,
     level = 'ok',
     synced = false,
@@ -30,7 +30,7 @@ local function _exec_universecreditcoin_cli(...)
     if type(_rpcBind) == 'string' then
         table.insert(_arg, 1, '-rpcconnect=' .. _rpcBind)
     end
-    local _proc = proc.spawn('bin/ xsolidus-cli', _arg, {stdio = {stdout = 'pipe', stderr = 'pipe'}, wait = true})
+    local _proc = proc.spawn('bin/xsolidus-cli', _arg, {stdio = {stdout = 'pipe', stderr = 'pipe'}, wait = true})
 
     local _exitcode = _proc.exitcode
     local _stdout = _proc.stdoutStream:read('a') or ''
@@ -57,7 +57,7 @@ local function _get_universecreditcoin_cli_result(exitcode, stdout, stderr)
     end
 end
 
-if _info. xsolidusd == 'running' then
+if _info.xsolidusd == 'running' then
     if am.app.get_configuration("NODE_PRIVKEY") then
         local _exitcode, _stdout, _stderr = _exec_universecreditcoin_cli("-datadir=data", "masternode", "status")
         local _success, _output = _get_universecreditcoin_cli_result(_exitcode, _stdout, _stderr)
