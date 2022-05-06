@@ -59,7 +59,7 @@ end
 
 if _info.xsolidusd == 'running' then
     if am.app.get_configuration("NODE_PRIVKEY") then
-        local _exitcode, _stdout, _stderr = _exec_universecreditcoin_cli("-datadir=data", "masternode", "status")
+        local _exitcode, _stdout, _stderr = _exec_universecreditcoin_cli("-datadir=data", "getmasternodestatus")
         local _success, _output = _get_universecreditcoin_cli_result(_exitcode, _stdout, _stderr)
 
         _info.status = _output.message
